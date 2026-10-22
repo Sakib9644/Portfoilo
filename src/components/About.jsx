@@ -61,7 +61,7 @@ export default function About() {
                 </div>
                 <div className="about__fact">
                   <span className="about__fact-label">Experience</span>
-                  <span className="about__fact-value">2+ Years Production Web Engineering</span>
+                  <span className="about__fact-value">3+ Years Production Web Engineering</span>
                 </div>
                 <div className="about__fact">
                   <span className="about__fact-label">Education</span>

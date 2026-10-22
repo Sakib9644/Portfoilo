@@ -4,7 +4,7 @@
   padding: 0 24px;
 }
 
-/* Category Filter Tabs */
+/* Top Category Filter Tabs */
 .projects__filter-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -13,11 +13,11 @@
 }
 
 .projects__tab-btn {
-  padding: 7px 16px;
+  padding: 8px 18px;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-secondary);
   cursor: pointer;
@@ -35,43 +35,195 @@
   background: var(--accent-primary);
   border-color: var(--accent-primary);
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
 }
 
-/* Projects Grid */
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+/* Company-Wise Organization */
+.projects__companies-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.projects__company-block {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.projects__card {
-  padding: 22px 24px;
+.projects__company-banner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid #3b82f6;
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
 }
 
+.projects__company-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.projects__company-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.projects__company-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.projects__company-heading {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.projects__company-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: #93c5fd;
+  font-family: var(--font-mono);
+}
+
+.projects__company-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.projects__company-dot {
+  opacity: 0.5;
+}
+
+/* In-Section Sub-Navbar for App / Web Selection */
+.projects__subnav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(10, 16, 30, 0.75);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.projects__subnav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-primary);
+}
+
+.projects__subnav-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.projects__subnav-btn--active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+}
+
+.projects__subnav-btn--active:hover {
+  background: var(--accent-primary-hover);
+  color: #ffffff;
+}
+
+.projects__subnav-icon {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.projects__subnav-count {
+  font-size: 0.72rem;
+  opacity: 0.8;
+  font-family: var(--font-mono);
+}
+
+/* Projects Grid - Balanced 2-Column Responsive Layout */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.projects__card {
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.28);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+}
+
+.projects__card:hover {
+  transform: translateY(-3px);
+  border-color: #3b82f6;
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(59, 130, 246, 0.25);
+}
+
+/* Card Top: Badges and company */
 .projects__card-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .projects__card-tag {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   font-family: var(--font-mono);
-  padding: 3px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
 
-/* Special Solo Full Stack Badge */
+/* Solo Full Stack Tag */
 .tag-solo {
   color: #34d399;
   background: rgba(16, 185, 129, 0.15);
@@ -80,50 +232,93 @@
 }
 
 .projects__card-company {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
+/* Project Title */
 .projects__card-title {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
-/* Role Callout */
-.projects__card-role-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  font-size: 0.8rem;
-  color: #93c5fd;
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-  margin-bottom: 12px;
-  line-height: 1.45;
-}
-
-.projects__role-icon {
-  margin-top: 2px;
-  flex-shrink: 0;
-  font-size: 0.9rem;
-}
-
-.projects__card-desc {
+/* About Lead Text */
+.projects__card-about {
   font-size: 0.88rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
   margin-bottom: 16px;
 }
 
+/* Key Contributions Section */
+.projects__contributions {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid #3b82f6;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+
+.projects__contributions-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #93c5fd;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+}
+
+.projects__contributions-icon {
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.projects__contributions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projects__contribution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.projects__bullet-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #60a5fa;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.projects__contribution-text {
+  flex: 1;
+}
+
+/* Tech Chips */
 .projects__tech-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
   margin-top: auto;
   margin-bottom: 16px;
 }
@@ -135,10 +330,17 @@
   color: var(--text-secondary);
   background: var(--bg-muted);
   border: 1px solid var(--border-color);
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
 }
 
+.projects__tech-tag:hover {
+  border-color: #3b82f6;
+  color: var(--text-primary);
+}
+
+/* Links Row at Bottom of Card */
 .projects__links-row {
   display: flex;
   flex-wrap: wrap;
@@ -150,10 +352,10 @@
 .projects__btn-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 7px 14px;
   background: var(--bg-muted);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
@@ -166,10 +368,91 @@
   border-color: var(--accent-primary);
   color: #ffffff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
-@media (max-width: 640px) {
+.projects__btn-link--primary {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+.projects__btn-link--primary:hover {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Full-Width Featured Project (SwiftBus) */
+.projects__card--featured {
+  grid-column: 1 / -1;
+  border-color: rgba(16, 185, 129, 0.35);
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, var(--bg-surface) 100%);
+  padding: 32px;
+}
+
+.projects__card--featured:hover {
+  border-color: #10b981;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(16, 185, 129, 0.3);
+}
+
+.projects__featured-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.projects__featured-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__card--featured .projects__contributions {
+  border-left-color: #10b981;
+  background: rgba(16, 185, 129, 0.04);
+  border-color: rgba(16, 185, 129, 0.2);
+  margin-bottom: 0;
+  padding: 18px 20px;
+}
+
+.projects__card--featured .projects__contributions-header {
+  color: #6ee7b7;
+}
+
+.projects__card--featured .projects__bullet-dot {
+  background: #34d399;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects__card {
+    padding: 22px 20px;
+  }
+
+  .projects__card--featured {
+    padding: 22px 20px;
+  }
+
+  .projects__featured-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects__company-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .projects__subnav {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
   }
 }

@@ -22,7 +22,7 @@ export default function Hero() {
             </p>
 
             <p className="hero__bio">
-              Full Stack Software Developer with 2+ years of production experience crafting scalable <strong>Laravel RESTful APIs</strong>, relational database systems, and interactive <strong>React.js</strong> web applications. Currently engineering high-performance backends and AI integrations at <strong>Softvence Agency</strong>, with proven experience building full-stack web platforms from scratch.
+              Full Stack Software Developer with 3+ years of production experience crafting scalable <strong>Laravel RESTful APIs</strong>, relational database systems, and interactive <strong>React.js</strong> web applications. Currently engineering high-performance backends and AI integrations at <strong>Softvence Agency</strong>, with proven experience building full-stack web platforms from scratch.
             </p>
 
             <div className="hero__stack-pills">
