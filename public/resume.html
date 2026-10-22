@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Md. Sadman Sakib</title>
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #475569;
+      --accent: #4f46e5;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--primary);
+      background: #f8fafc;
+      line-height: 1.5;
+      font-size: 14px;
+      padding: 30px 15px;
+    }
+    .resume {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .print-btn-bar {
+      max-width: 850px;
+      margin: 0 auto 15px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--secondary);
+    }
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    .objective {
+      font-style: italic;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .experience-item, .education-item {
+      margin-bottom: 16px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .item-desc {
+      margin-top: 6px;
+      color: #334155;
+    }
+    .item-list {
+      margin-top: 6px;
+      padding-left: 18px;
+      color: #334155;
+    }
+    .item-list li {
+      margin-bottom: 4px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 8px 14px;
+      font-size: 13px;
+    }
+    .skills-category {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .ref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .ref-card {
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .ref-name { font-weight: 700; }
+    .ref-title { font-size: 12px; color: var(--secondary); }
+    .ref-contact { font-size: 12px; color: var(--accent); margin-top: 4px; }
+    .declaration {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--secondary);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 24px;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .resume { box-shadow: none; padding: 20px; max-width: 100%; }
+      .print-btn-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-btn-bar">
+    <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <a href="/" class="btn" style="background:#64748b;">← Back to Portfolio</a>
+  </div>
+
+  <div class="resume">
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+      <div>
+        <h1 class="name">Md. Sadman Sakib</h1>
+        <div class="title">Full Stack Software Developer (PHP/Laravel &amp; React.js)</div>
+        <div class="contact-info">
+          <span>📍 Middle Badda, Dhaka</span>
+          <span>📞 +8801985562100</span>
+          <span>✉️ <a href="mailto:saadman0000@gmail.com">saadman0000@gmail.com</a></span>
+          <span>💼 <a href="https://www.linkedin.com/in/md-sadman-sakib-661641154" target="_blank">LinkedIn</a></span>
+          <span>🐙 <a href="https://github.com/Sakib9644" target="_blank">GitHub</a></span>
+        </div>
+      </div>
+      <img src="/profile.png" alt="Md. Sadman Sakib" style="width: 105px; height: 105px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid #4f46e5; flex-shrink: 0;" />
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Career Objective</h2>
+      <p class="objective">
+        &ldquo;I want to build a fulfilling career in a growing company, tackling challenging roles. With hard work and a real love for doing great things, I aim to learn, get better, and help both myself and the company succeed. I'm committed to making a meaningful impact that boosts the company's value and overall success.&rdquo;
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-category">Languages:</div>
+        <div>PHP, Java, JavaScript (ES6+)</div>
+        <div class="skills-category">Frameworks:</div>
+        <div>Laravel, React.js, jQuery, Bootstrap 4</div>
+        <div class="skills-category">Databases:</div>
+        <div>MySQL</div>
+        <div class="skills-category">Web & Protocols:</div>
+        <div>HTML5, CSS3, AJAX, RESTful APIs, WebSockets (Laravel Reverb)</div>
+        <div class="skills-category">DevOps & Cloud:</div>
+        <div>AWS (EC2 & S3), Linux (Ubuntu), Windows Server, VPS, CI/CD Pipelines</div>
+        <div class="skills-category">Tools & IDEs:</div>
+        <div>Git, Laravel Herd, Laragon, XAMPP, Visual Studio Code, Code::Blocks</div>
+        <div class="skills-category">Soft Skills:</div>
+        <div>Fast Adaptability, Good Communicator, Problem Solver, Work Ethic, Team Player</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <span>Bachelor of Computer Science and Engineering (BCSE)</span>
+          <span>Graduated 2022</span>
+        </div>
+        <div class="item-sub">
+          <span>International University of Business Agriculture and Technology (IUBAT)</span>
+          <span>CGPA: 3.08 / 4.00</span>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="item-header">
+          <span>Higher Secondary Certificate (H.S.C) — Science</span>
+          <span>Passing Year: 2016</span>
+        </div>
+        <div class="item-sub">
+          <span>Govt. B.L College, Khulna (Jashore Board)</span>
+          <span>GPA: 3.83 / 5.00</span>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="item-header">
+          <span>Secondary School Certificate (S.S.C) — Science</span>
+          <span>Passing Year: 2013</span>
+        </div>
+        <div class="item-sub">
+          <span>Rotary School, Khulna (Jashore Board)</span>
+          <span>GPA: 5.00 / 5.00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span>Software Developer</span>
+          <span>May 2, 2025 – Present</span>
+        </div>
+        <div class="item-sub">
+          <span>Softvence Agency</span>
+          <span>Dhaka, Bangladesh</span>
+        </div>
+        <p class="item-desc">Architecting robust RESTful APIs, scalable queues, and external cloud/AI integrations for flagship products:</p>
+        <ul class="item-list">
+          <li><strong><a href="https://apps.apple.com/us/app/u-photo-studio/id6761320322" target="_blank">U Photo Studio (App Store)</a>:</strong> Built REST APIs and integrated Google Gemini AI APIs for prompt-based photo editing with asynchronous image processing queues.</li>
+          <li><strong><a href="https://play.google.com/store/apps/details?id=com.lystajob.carlotto&utm_source=gemini" target="_blank">Lystajob (Google Play</a> | <a href="https://apps.apple.com/us/app/lystajob/id6758605988" target="_blank">App Store)</a>:</strong> Developed RESTful APIs supporting location-based map discovery, real-time in-app messaging, and push notifications.</li>
+          <li><strong><a href="https://apps.apple.com/il/app/romeo-reminder/id6758392313" target="_blank">Romeo Reminders (App Store)</a>:</strong> Engineered automated anniversary alerts using Laravel Scheduler, notification preference matrix, partner profile management, and cloud photo storage.</li>
+          <li><strong><a href="https://play.google.com/store/apps/details?id=com.frontfootlabs.propin&hl=en" target="_blank">Propin (Google Play)</a>:</strong> Developed high-performance real estate APIs with AWS S3 media pipeline for HD photos and video walkthroughs.</li>
+          <li><strong><a href="https://xn--hydra-fsa.com/?utm_source=gemini" target="_blank">HYDRAÉ (Live Store)</a>:</strong> Integrated Stripe and PayPal payment gateways with DPD & Colissimo automated shipping calculations.</li>
+          <li><strong><a href="https://df-membership.com/dashboard" target="_blank">Dreamers & Founders Platform (Live Portal)</a>:</strong> Built backend APIs for gamified LMS with 5 core modules, automated grading, XP scoring, and parent monitoring.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span>Junior Software Developer</span>
+          <span>January 20, 2024 – April 30, 2025</span>
+        </div>
+        <div class="item-sub">
+          <span>IT WAY-BD</span>
+          <span>Dhaka, Bangladesh</span>
+        </div>
+        <p class="item-desc">Developed diverse enterprise solutions, e-commerce applications, and ERP modules:</p>
+        <ul class="item-list">
+          <li><strong>Fashionable.com.bd:</strong> Led full lifecycle development single-handedly from the ground up.</li>
+          <li><strong>Garments ERP (turjotex.turkiabazar.com):</strong> Implemented Export LC & Import LC modules for international trade compliance.</li>
+          <li><strong>E-Commerce Suite:</strong> Integrated Steadfast Courier API, SSLCommerz, and Square payment gateways across multiple commerce portals (click2buyshop.com.bd, nityapanyabd.com, abdullahincubator.com, hkshop.com.bd, yariqa.org).</li>
+          <li><strong>Hospital Management (nasimamedicalbd.com):</strong> Streamlined financial accounts and patient billing workflows.</li>
+          <li><strong>ISP Management (swcbroadband.itwaybdsoft.com):</strong> Developed reseller upgrade/downgrade logic and subscription billing.</li>
+          <li><strong>Ability for Disability (abilityfordisabilityfund.com):</strong> Built responsive donation portal with SSLCommerz payment gateway.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span>PHP / Laravel Developer Intern</span>
+          <span>October 15, 2023 – January 9, 2024</span>
+        </div>
+        <div class="item-sub">
+          <span>Gigabit LLC</span>
+          <span>Dhaka, Bangladesh</span>
+        </div>
+        <ul class="item-list">
+          <li>Engineered full-stack organizational management system <strong>Tinhih Management Portal (tinhih.com)</strong>.</li>
+          <li>Learned production-level Laravel patterns, database architecture, and security protocols.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Key Projects &amp; Live Deployments</h2>
+      <ul class="item-list">
+        <li><strong><a href="https://busticket.samadhan24.com/" target="_blank">SwiftBus (Live Reservation Platform)</a>:</strong> Full-stack intercity bus ticket reservation platform across Bangladesh featuring real-time trip searches, interactive route exploration, and secure booking workflow.</li>
+        <li><strong><a href="https://fashionable.com.bd" target="_blank">Fashionable.com.bd (Live E-Commerce)</a>:</strong> Lifestyle e-commerce platform built single-handedly from the ground up using Laravel and MySQL.</li>
+      </ul>
+    </div>
+
+
+    <div class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="item-list">
+        <li><strong>PHP With Laravel Framework:</strong> Gigabit LLC (Oct 15, 2023 – Jan 9, 2024) — Project: Tinhih Management Portal (tinhih.com)</li>
+        <li><strong>Java Intermediate:</strong> Sololearn (<a href="https://www.sololearn.com/certificates/CCLQSPYUZF" target="_blank">Certificate Link</a>)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Languages & Interests</h2>
+      <div class="skills-grid">
+        <div class="skills-category">Languages:</div>
+        <div>Bangla (Native / Excellent), English (Speaking: Above Average | Reading & Writing: Good)</div>
+        <div class="skills-category">Areas of Interest:</div>
+        <div>Problem Solving, Logical Reasoning, Cyber Security, Machine Learning, Cricket</div>
+        <div class="skills-category">Hobbies:</div>
+        <div>Reading books, Solving puzzles, Playing Cricket</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">References</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ref-name">Dr. Utpal Kanti Das</div>
+          <div class="ref-title">Associate Professor & Chairman, Dept. of CSE<br>IUBAT</div>
+          <div class="ref-contact">Cell: 01745896035 | E-Mail: ukd@iubat.edu</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-name">Rafiul Hasan Tonmoy</div>
+          <div class="ref-title">Senior Software Engineer<br>V-generation</div>
+          <div class="ref-contact">Cell: 01629051870 | E-Mail: rhtonmoyhd@gmail.com</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="declaration">
+      <strong>Declaration:</strong> I thus confirm that all the details furnished above are authentic and accurate to the best of my belief. — <em>Md. Sadman Sakib</em>
+    </div>
+  </div>
+</body>
+</html>
